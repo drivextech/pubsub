@@ -1,0 +1,13 @@
+env: X=Y
+
+compiler: gcc
+
+language: cpp
+
+#install: make ninja cmake get-deps
+
+# script: skip
+
+script:
+  - git submodule update --init --recursive
+  - mkdir build && cd build && cmake -DSELF_TEST_ENABLE=ON .. && make && ctest

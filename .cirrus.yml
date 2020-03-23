@@ -1,0 +1,13 @@
+
+env:
+  X: Y
+
+test_task:
+  container:
+    matrix:
+      - image: teeks99/gcc-ubuntu:latest
+      - image: teeks99/clang-ubuntu:latest
+  test_script:
+    - apt update && apt install -y cmake git
+    - git submodule update --init --recursive
+    - mkdir build && cd build && cmake -DSELF_TEST_ENABLE=ON .. && make && ctest

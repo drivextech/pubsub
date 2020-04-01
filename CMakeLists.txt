@@ -18,6 +18,12 @@ if(SELF_TEST_ENABLE)
 endif()
 unset(USE_MY_LIB CACHE)
 
+set(BUILD_EXAMPLES OFF)
+set(BUILD_TESTS OFF)
+set(BUILD_TOOLS OFF)
+set(BUILD_TOOLS_DOCS OFF)
+set(BUILD_API_DOCS OFF)
+set(RUN_SYSTEM_TESTS OFF)
 add_subdirectory(Thirdparty/rabbitmq-c)
 # add_subdirectory(Thirdparty/rabbitmq-cpp)
 

@@ -17,7 +17,7 @@ using std::function;
 class PubSubBackend
 {
 public:
-    typedef void on_data_cber(const BYTE* data, WORD data_len);
+    typedef void on_data_cber(const dxt_common::BYTE* data, dxt_common::WORD data_len);
 
     PubSubBackend(const string& pub_name, const string& sub_name);
     virtual ~PubSubBackend();
@@ -28,7 +28,7 @@ public:
     virtual bool start_publish() = 0;
     virtual bool start_consume() = 0;
 
-    virtual bool publish_data(const BYTE* data, WORD data_len) = 0;
+    virtual bool publish_data(const dxt_common::BYTE* data, dxt_common::WORD data_len) = 0;
 
     virtual void run_forever() = 0;
 

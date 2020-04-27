@@ -25,7 +25,7 @@ public:
     virtual bool start_publish() override;
     virtual bool start_consume() override;
 
-    virtual bool publish_data(const BYTE* data, WORD data_len) override;
+    virtual bool publish_data(const dxt_common::BYTE* data, dxt_common::WORD data_len) override;
 
     virtual void run_forever() override;
 

@@ -11,6 +11,8 @@
 
 
 using std::unique_ptr;
+using dxt_common::BYTE;
+using dxt_common::WORD;
 
 
 struct PubSubBackendRabbitmq::rabbitmq_internal_data {
